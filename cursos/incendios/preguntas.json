@@ -1,0 +1,29 @@
+{
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Cuáles son los tres elementos del Triángulo del Fuego?",
+      "respuesta": "Los tres elementos son: Combustible (material que arde), Oxidante (generalmente oxígeno del aire) y Calor (energía de activación necesaria para iniciar la combustión)."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué elemento ataca el agua cuando se usa para apagar un incendio?",
+      "respuesta": "El agua ataca principalmente el elemento CALOR, mediante el enfriamiento. Absorbe grandes cantidades de calor al evaporarse, reduciendo la temperatura del combustible por debajo de su punto de ignición."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Por qué una manta ignífuga puede sofocar un fuego?",
+      "respuesta": "Una manta ignífuga sofoca un fuego porque aísla el combustible del OXÍGENO del aire, eliminando así uno de los elementos esenciales del Triángulo del Fuego (el oxidante). Sin oxígeno, la combustión no puede mantenerse."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué diferencia hay entre el Triángulo y el Tetraedro del Fuego?",
+      "respuesta": "El Triángulo del Fuego incluye tres elementos: combustible, oxidante y calor. El Tetraedro del Fuego añade un cuarto elemento: la REACCIÓN EN CADENA (radicales libres). El tetraedro es más completo y se usa para explicar incendios más complejos, donde los extintores químicos actúan rompiendo esta reacción en cadena, no solo eliminando calor, oxígeno o combustible."
+    }
+  ],
+  "metadata": {
+    "tema": "Triángulo y Tetraedro del Fuego",
+    "total_preguntas": 4,
+    "fecha_creacion": "2026-07-16"
+  }
+}
