@@ -1,16 +1,28 @@
+import os
+import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 
-import os
-
 load_dotenv()
 
+# ==========================================
+# CONEXIÓN CON GROQ
+# ==========================================
+
+try:
+    api_key = st.secrets["GROQ_API_KEY"]
+except (KeyError, FileNotFoundError):
+    api_key = os.getenv("GROQ_API_KEY")
+
+if not api_key:
+    raise RuntimeError(
+        "No se encontró GROQ_API_KEY. "
+        "Configura la clave en Streamlit Secrets."
+    )
+
 client = OpenAI(
-
-    api_key=os.getenv("GROQ_API_KEY"),
-
+    api_key=api_key.strip(),
     base_url="https://api.groq.com/openai/v1"
-
 )
 
 # ==========================================
@@ -20,11 +32,8 @@ client = OpenAI(
 def cargar_prompt():
 
     with open(
-
         "prompts/prompt_sistema.txt",
-
         encoding="utf-8"
-
     ) as f:
 
         return f.read()
@@ -35,13 +44,9 @@ def cargar_prompt():
 # ==========================================
 
 def responder(
-
     pregunta,
-
     respuesta_usuario,
-
     contenido
-
 ):
 
     prompt = cargar_prompt()
@@ -73,23 +78,14 @@ RESPUESTA DEL PARTICIPANTE
         temperature=0.2,
 
         messages=[
-
             {
-
-                "role":"system",
-
-                "content":prompt
-
+                "role": "system",
+                "content": prompt
             },
-
             {
-
-                "role":"user",
-
-                "content":mensaje
-
+                "role": "user",
+                "content": mensaje
             }
-
         ]
 
     )
